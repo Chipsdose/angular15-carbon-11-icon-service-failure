@@ -1,10 +1,11 @@
 import {TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
+import {beforeEach, describe, it} from "@jest/globals";
 
 describe('AppComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [
+            imports: [
                 AppComponent
             ],
         }).compileComponents();
