@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, HostBinding} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HeaderModule, IconModule, UIShellModule} from "carbon-components-angular";
 
@@ -15,5 +15,6 @@ import {HeaderModule, IconModule, UIShellModule} from "carbon-components-angular
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+    @HostBinding('class.cds--header') headerClass = true;
 
 }

@@ -1,0 +1,24 @@
+<form #f="ngForm" [formGroup]="form">
+    <ibm-label
+               data-testid="sf-main-label"
+               [warn]="!f.valid && fInput.value.length > 0"
+               warnText="Please enter at least 3 letters...">
+        <input #fInput
+               data-testid="sf-main-input"
+               ibmText
+               size="lg"
+               placeholder="Enter text.."
+               formControlName="query">
+    </ibm-label>
+    <button
+            data-testid="sf-btn-submit"
+            [cdsButton]="'primary'"
+            size="sm"
+            [isExpressive]="true"
+            type="submit"
+            [disabled]="!f.valid">
+        >
+        Suchen
+        <svg class="cds--btn__icon" cdsIcon="search" size="16"/>
+    </button>
+</form>
